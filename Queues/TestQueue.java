@@ -1,3 +1,4 @@
+package Queues;
 // This is the test queue implementation
 public class TestQueue  {
     public static MyQueue combine(MyQueue q1,MyQueue q2) throws Exception{

@@ -1,5 +1,4 @@
-
-
+package Queues;
 public class QueueArray implements MyQueue {
 	protected int[] theArray;
 	protected int size; // number of currently stored data.

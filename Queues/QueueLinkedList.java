@@ -1,5 +1,4 @@
-
-
+package Queues;
 public class QueueLinkedList implements MyQueue {
 	CDLinkedList theList;
 
