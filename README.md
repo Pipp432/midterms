@@ -10,7 +10,7 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 | OddNumber()| - | 2016 | TestStack.java|
 | CrossOver()| - | 2016 | TestQueue2.java|
 | GreaterThan() [WIP]| - | 2017 | BST.java|
-| swap()| - | 2017 | TestStack2.java|
+| swap()| O(n) | 2017 | TestStack2.java|
 
 
 # For written question
