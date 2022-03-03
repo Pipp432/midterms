@@ -8,6 +8,8 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 | TestQueue | -      |    2018 | TestQueue.java|
 | ChangeToIntersect()| - | 2017 | CDLinkedList.java|
 | OddNumber()| - | 2016 | TestStack.java|
+| CrossOver()| - | 2016 | TestQueue2.java|
+
 
 # For written question
 I'll post pdfs

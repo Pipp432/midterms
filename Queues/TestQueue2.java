@@ -2,13 +2,16 @@ package Queues;
 
 public class TestQueue2 {
     MyQueue q1, q2;
-    // q1 12 345
-    // q2 678 9+
-
-    // 2,
+   
     public void crossOver(int p1, int p2) throws Exception{
-        int size1 = q1.size()-p1; //5
-        int size2 = q2.size()-p2; //5
+        if(q1.isEmpty()|| q2.isEmpty()){
+            return;
+        }
+        if(p1<0||p2<0||p1>q1.size()||p2>q2.size()){
+            return;
+        }
+        int size1 = q1.size()-p1; 
+        int size2 = q2.size()-p2; 
         for(int i= 0; i<p1;i++){
             q1.insertLast(q1.removeFirst());
         }
