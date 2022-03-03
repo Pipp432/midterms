@@ -140,6 +140,10 @@ public class CDLinkedList {
 			Object data = itr.next();
 
 			System.out.println(data);
+			if(((DListIterator)itr).currentNode==header){
+				break;
+
+			}
 
 		}
 	}
@@ -161,6 +165,26 @@ public class CDLinkedList {
 		DListIterator p2 = new DListIterator(p.currentNode.previousNode);
 		return p2;
 
+	}
+	// Change to Intersect Problem
+	public void changeToIntersect(CDLinkedList list2) throws Exception{
+		DListIterator iter = new DListIterator(header);
+		iter.next();
+		while(iter.currentNode!=header){
+			
+			int current = list2.find(iter.currentNode.data);
+			
+			if(current == -1){
+				remove(iter.currentNode.data);
+			}else{
+
+			}
+			
+			iter.next();
+		}
+		
+		
+		
 	}
 	
 	
