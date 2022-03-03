@@ -1,5 +1,7 @@
 package BST;
 
+import java.util.ArrayList;
+
 public class BST {
 	BSTNode root;
 	int size;
@@ -189,165 +191,202 @@ public class BST {
 		TreeIterator itr = new TreeIterator(temp);
 		return itr;
 	}
+	// This is currently a WIP. Technically it works but it return a one sided tree
+	public BST greaterThan(int v) throws Exception{
+		TreeIterator itr =(TreeIterator)(findMin());
+		BST result = new BST(null,0);
+		
+		
+		while(itr.hasNext()){
+			if(itr.currentNode.data>v) result.insert(itr.currentNode.data);
+
+			
+				itr.next();
+		
+		}
+		if(itr.currentNode.data>v){
+			result.insert(itr.currentNode.data);
+
+		}
+		
+		return result;
+	}
+	
+	public void printAllData() {
+		System.out.println();
+		ArrayList<Integer> data = new ArrayList<Integer>();
+		data.add(this.root.data);
+		while(data.size() > 0) {
+			int d=data.remove(0);
+			System.out.print(d+" ");
+			TreeIterator t = (TreeIterator) this.find(d);
+			if(t.currentNode.left != null)
+				data.add(t.currentNode.left.data);
+			if(t.currentNode.right != null)
+				data.add(t.currentNode.right.data);			
+		}
+		System.out.println();
+		System.out.println();
+	}
 	
 
-	public static void main(String[] args) {
-		BSTNode r = new BSTNode(7);
-		BST t = new BST(r, 1);
-		t.insert(3);
-		t.insert(1);
-		t.insert(11);
-		t.insert(2);
-		t.insert(5);
-		t.insert(9);
-		t.insert(6);
+	// public static void main(String[] args) {
+	// 	BSTNode r = new BSTNode(7);
+	// 	BST t = new BST(r, 1);
+	// 	t.insert(3);
+	// 	t.insert(1);
+	// 	t.insert(11);
+	// 	t.insert(2);
+	// 	t.insert(5);
+	// 	t.insert(9);
+	// 	t.insert(6);
 
-		t.insert(0);
-		t.insert(8);
-		t.insert(10);
-		t.insert(12);
-		t.insert(13);
-		t.insert(14);
-		t.insert(4);
-		BTreePrinter.printNode(t.root);
+	// 	t.insert(0);
+	// 	t.insert(8);
+	// 	t.insert(10);
+	// 	t.insert(12);
+	// 	t.insert(13);
+	// 	t.insert(14);
+	// 	t.insert(4);
+	// 	BTreePrinter.printNode(t.root);
 
-		System.out.println("Now, remove 2.");
-		t.remove(2);
-		BTreePrinter.printNode(t.root);
+	// 	System.out.println("Now, remove 2.");
+	// 	t.remove(2);
+	// 	BTreePrinter.printNode(t.root);
 
-		System.out.println("Now, remove 8.");
-		t.remove(8);
-		BTreePrinter.printNode(t.root);
+	// 	System.out.println("Now, remove 8.");
+	// 	t.remove(8);
+	// 	BTreePrinter.printNode(t.root);
 
-		System.out.println("Now, remove 1.");
-		t.remove(1);
-		BTreePrinter.printNode(t.root);
-		TreeIterator itr = (TreeIterator) t.find(0);
-		if (itr.currentNode.parent.data == 3) {
-			System.out.println("Parent of 0 is correct.");
-		} else {
-			System.out.println("Parent of 0 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 1.");
+	// 	t.remove(1);
+	// 	BTreePrinter.printNode(t.root);
+	// 	TreeIterator itr = (TreeIterator) t.find(0);
+	// 	if (itr.currentNode.parent.data == 3) {
+	// 		System.out.println("Parent of 0 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 0 is NOT correct.");
+	// 	}
 
-		System.out.println("Now, remove 12.");
-		t.remove(12);
-		BTreePrinter.printNode(t.root);
-		itr = (TreeIterator) t.find(13);
-		if (itr.currentNode.parent.data == 11) {
-			System.out.println("Parent of 13 is correct.");
-		} else {
-			System.out.println("Parent of 13 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 12.");
+	// 	t.remove(12);
+	// 	BTreePrinter.printNode(t.root);
+	// 	itr = (TreeIterator) t.find(13);
+	// 	if (itr.currentNode.parent.data == 11) {
+	// 		System.out.println("Parent of 13 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 13 is NOT correct.");
+	// 	}
 
-		System.out.println("Now, remove 0 and 3.");
-		t.remove(0);
-		t.remove(3);
-		BTreePrinter.printNode(t.root);
-		itr = (TreeIterator) t.find(5);
-		if (itr.currentNode.parent.data == 7) {
-			System.out.println("Parent of 5 is correct.");
-		} else {
-			System.out.println("Parent of 5 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 0 and 3.");
+	// 	t.remove(0);
+	// 	t.remove(3);
+	// 	BTreePrinter.printNode(t.root);
+	// 	itr = (TreeIterator) t.find(5);
+	// 	if (itr.currentNode.parent.data == 7) {
+	// 		System.out.println("Parent of 5 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 5 is NOT correct.");
+	// 	}
 
-		System.out.println("Now, remove 6, insert 1,2,3 and remove 5.");
-		t.remove(6);
-		t.insert(2);
-		t.insert(1);
-		t.insert(3);
-		t.remove(5);
-		BTreePrinter.printNode(t.root);
-		itr = (TreeIterator) t.find(4);
-		if (itr.currentNode.parent.data == 7) {
-			System.out.println("Parent of 4 is correct.");
-		} else {
-			System.out.println("Parent of 4 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 6, insert 1,2,3 and remove 5.");
+	// 	t.remove(6);
+	// 	t.insert(2);
+	// 	t.insert(1);
+	// 	t.insert(3);
+	// 	t.remove(5);
+	// 	BTreePrinter.printNode(t.root);
+	// 	itr = (TreeIterator) t.find(4);
+	// 	if (itr.currentNode.parent.data == 7) {
+	// 		System.out.println("Parent of 4 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 4 is NOT correct.");
+	// 	}
 
-		System.out.println("Reset the tree");
-		r = new BSTNode(7);
-		t = new BST(r, 1);
-		t.insert(3);
-		t.insert(1);
-		t.insert(11);
-		t.insert(2);
-		t.insert(5);
-		t.insert(9);
-		t.insert(6);
+	// 	System.out.println("Reset the tree");
+	// 	r = new BSTNode(7);
+	// 	t = new BST(r, 1);
+	// 	t.insert(3);
+	// 	t.insert(1);
+	// 	t.insert(11);
+	// 	t.insert(2);
+	// 	t.insert(5);
+	// 	t.insert(9);
+	// 	t.insert(6);
 
-		t.insert(0);
-		t.insert(8);
-		t.insert(10);
-		t.insert(12);
-		t.insert(13);
-		t.insert(14);
-		t.insert(4);
-		BTreePrinter.printNode(t.root);
+	// 	t.insert(0);
+	// 	t.insert(8);
+	// 	t.insert(10);
+	// 	t.insert(12);
+	// 	t.insert(13);
+	// 	t.insert(14);
+	// 	t.insert(4);
+	// 	BTreePrinter.printNode(t.root);
 
-		System.out.println("Now, remove 3.");
-		t.remove(3);
-		BTreePrinter.printNode(t.root);
-		itr = (TreeIterator) t.find(4);
-		if (itr.currentNode.parent.data == 7) {
-			System.out.println("Parent of 4 is correct.");
-		} else {
-			System.out.println("Parent of 4 is NOT correct.");
-		}
-		itr = (TreeIterator) t.find(5);
-		if (itr.currentNode.parent.data == 4) {
-			System.out.println("Parent of 5 is correct.");
-		} else {
-			System.out.println("Parent of 5 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 3.");
+	// 	t.remove(3);
+	// 	BTreePrinter.printNode(t.root);
+	// 	itr = (TreeIterator) t.find(4);
+	// 	if (itr.currentNode.parent.data == 7) {
+	// 		System.out.println("Parent of 4 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 4 is NOT correct.");
+	// 	}
+	// 	itr = (TreeIterator) t.find(5);
+	// 	if (itr.currentNode.parent.data == 4) {
+	// 		System.out.println("Parent of 5 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 5 is NOT correct.");
+	// 	}
 
-		System.out.println("Now, remove 9.");
-		t.remove(9);
-		BTreePrinter.printNode(t.root);
-		itr = (TreeIterator) t.find(10);
-		if (itr.currentNode.parent.data == 11) {
-			System.out.println("Parent of 10 is correct.");
-		} else {
-			System.out.println("Parent of 10 is NOT correct.");
-		}
-		itr = (TreeIterator) t.find(8);
-		if (itr.currentNode.parent.data == 10) {
-			System.out.println("Parent of 8 is correct.");
-		} else {
-			System.out.println("Parent of 8 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 9.");
+	// 	t.remove(9);
+	// 	BTreePrinter.printNode(t.root);
+	// 	itr = (TreeIterator) t.find(10);
+	// 	if (itr.currentNode.parent.data == 11) {
+	// 		System.out.println("Parent of 10 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 10 is NOT correct.");
+	// 	}
+	// 	itr = (TreeIterator) t.find(8);
+	// 	if (itr.currentNode.parent.data == 10) {
+	// 		System.out.println("Parent of 8 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 8 is NOT correct.");
+	// 	}
 
-		System.out.println("Now, remove 11.");
-		t.remove(11);
-		BTreePrinter.printNode(t.root);
-		itr = (TreeIterator) t.find(12);
-		if (itr.currentNode.parent.data == 7) {
-			System.out.println("Parent of 12 is correct.");
-		} else {
-			System.out.println("Parent of 12 is NOT correct.");
-		}
-		itr = (TreeIterator) t.find(10);
-		if (itr.currentNode.parent.data == 12) {
-			System.out.println("Parent of 10 is correct.");
-		} else {
-			System.out.println("Parent of 10 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 11.");
+	// 	t.remove(11);
+	// 	BTreePrinter.printNode(t.root);
+	// 	itr = (TreeIterator) t.find(12);
+	// 	if (itr.currentNode.parent.data == 7) {
+	// 		System.out.println("Parent of 12 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 12 is NOT correct.");
+	// 	}
+	// 	itr = (TreeIterator) t.find(10);
+	// 	if (itr.currentNode.parent.data == 12) {
+	// 		System.out.println("Parent of 10 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 10 is NOT correct.");
+	// 	}
 
-		System.out.println("Now, remove 7.");
-		t.remove(7);
-		BTreePrinter.printNode(t.root);
-		itr = (TreeIterator) t.find(4);
-		if (itr.currentNode.parent.data == 8) {
-			System.out.println("Parent of 4 is correct.");
-		} else {
-			System.out.println("Parent of 4 is NOT correct.");
-		}
-		itr = (TreeIterator) t.find(12);
-		if (itr.currentNode.parent.data == 8) {
-			System.out.println("Parent of 12 is correct.");
-		} else {
-			System.out.println("Parent of 12 is NOT correct.");
-		}
+	// 	System.out.println("Now, remove 7.");
+	// 	t.remove(7);
+	// 	BTreePrinter.printNode(t.root);
+	// 	itr = (TreeIterator) t.find(4);
+	// 	if (itr.currentNode.parent.data == 8) {
+	// 		System.out.println("Parent of 4 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 4 is NOT correct.");
+	// 	}
+	// 	itr = (TreeIterator) t.find(12);
+	// 	if (itr.currentNode.parent.data == 8) {
+	// 		System.out.println("Parent of 12 is correct.");
+	// 	} else {
+	// 		System.out.println("Parent of 12 is NOT correct.");
+	// 	}
 
-	}
+	// }
 
 }

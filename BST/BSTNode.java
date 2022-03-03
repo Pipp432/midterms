@@ -21,6 +21,6 @@ public class BSTNode   {
 	
 	
 	public static void main(String[] args) {
-		BSTNode b = new BSTNode(9); 
+		
 	}
 }
