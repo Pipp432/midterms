@@ -1,5 +1,6 @@
 package Stack;
 
+// This implementation of insertFromBottom is done using only methods defined in MyStack 
 public class UtilityStack {
     public static void insertFromBottom(int p, int value,MyStack s) throws Exception{
         StackArray temp = new StackArray();
