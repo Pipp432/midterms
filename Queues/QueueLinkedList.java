@@ -1,4 +1,5 @@
 package Queues;
+import LinkedList.*;
 public class QueueLinkedList implements MyQueue {
 	CDLinkedList theList;
 
@@ -51,7 +52,7 @@ public class QueueLinkedList implements MyQueue {
 		return theList.isFull();
 	}
 
-	public int size() {
+	public int size() throws Exception {
 		return theList.size();
 	}
 

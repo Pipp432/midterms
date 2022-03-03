@@ -21,5 +21,5 @@ public interface MyQueue {
 	public boolean isFull();
 	
 	//return the number of data currently stored in the queue.
-	public int size();        
+	public int size() throws Exception;        
 }

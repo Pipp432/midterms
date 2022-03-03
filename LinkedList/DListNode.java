@@ -4,7 +4,7 @@ package LinkedList;
 public class DListNode {
 	public int data;
 	public DListNode nextNode;
-	DListNode previousNode;
+	public DListNode previousNode;
 
 	DListNode(int data) {
 		this(data, null, null);
