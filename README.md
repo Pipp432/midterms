@@ -8,3 +8,6 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 | TestQueue | -      |    2018 |
 | ChangeToIntersect| - | 2017 |
 | OddNumber| - | 2016 |
+
+# For written question
+## I'll post pdfs
