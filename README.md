@@ -6,8 +6,8 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 | insertFromBottom()     | - | 2018 |
 | removeAt()     | -      |   2018 |
 | TestQueue | -      |    2018 |
-| ChangeToIntersect| - | 2017 |
-| OddNumber| - | 2016 |
+| ChangeToIntersect()| - | 2017 |
+| OddNumber()| - | 2016 |
 
 # For written question
-## I'll post pdfs
+I'll post pdfs
