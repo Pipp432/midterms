@@ -186,6 +186,40 @@ public class CDLinkedList {
 		
 		
 	}
+	public void swap(int v1,int v2) throws Exception{
+		if(find(v1) ==-1||find(v2)==-1){
+			return; //O(n)
+		}
+		if(isEmpty()) return;
+		DListIterator itr1 = new DListIterator(header);
+		DListIterator itr2 = new DListIterator(header);
+		// Move the iterator to the nodes we want to swap
+		
+		for(int i= -1;i<find(v1);i++){
+			itr1.next();
+		}
+		for(int i= -1;i<find(v2);i++){
+			itr2.next();
+		}
+		DListNode tempNext =itr1.currentNode.nextNode;
+		DListNode tempPrev =itr1.currentNode.previousNode;
+		
+		
+		itr1.currentNode.previousNode.nextNode = itr2.currentNode;
+		itr1.currentNode.nextNode.previousNode = itr2.currentNode;
+		itr1.currentNode.nextNode = itr2.currentNode.nextNode;
+		itr1.currentNode.previousNode = itr2.currentNode.previousNode;
+		
+		itr2.currentNode.nextNode.previousNode = itr1.currentNode;
+		itr2.currentNode.previousNode.nextNode = itr1.currentNode;
+		itr2.currentNode.nextNode = tempNext;
+		itr2.currentNode.previousNode = tempPrev;
+
+		
+		
+
+
+	}
 	
 	
 	
