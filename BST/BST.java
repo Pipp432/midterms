@@ -228,6 +228,46 @@ public class BST {
 		System.out.println();
 		System.out.println();
 	}
+	public boolean hasGreaterValueThan(int v) {
+		if(root==null) {
+			return false;
+		}
+		TreeIterator itr = new TreeIterator(root);
+		if(root.data>v)return true;
+		while(itr.currentNode.data<=v && itr.hasNext()) {
+			
+			itr = new TreeIterator(itr.currentNode.right);
+			if(itr.currentNode.data>v) {
+				return true;
+			}
+			
+		}
+		return false;
+		
+		
+
+
+
+	}
+
+	public BST difference(BST t) throws Exception {
+		if(t.isEmpty()) return this;
+		// Note that in the HW the constructor can be new BST(); but I am doing it this way to avoid error in this file
+		if(this.isEmpty()) return new BST(null,0);
+		
+		TreeIterator itr = findMin(root);
+		BST result = new BST(null,0);
+		while(itr.hasNext()) {
+			if((t.find(itr.currentNode.data))==null) {
+				result.insert(itr.currentNode.data);
+			}
+			itr.next();
+		}
+		if((t.find(itr.currentNode.data))==null)result.insert(itr.currentNode.data);
+		return result;
+
+
+	}
 	
 
 	// public static void main(String[] args) {
