@@ -22,7 +22,7 @@ class Main{
         qs.insertLast(3);
         qs.insertLast(4);
         qs.insertLast(5);
-        System.out.println(qs.size());
+        System.out.println("size: "+qs.size());
         System.out.println("front: "+qs.front());
         System.out.println("back: "+qs.back());
         int i =0;
