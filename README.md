@@ -1,9 +1,9 @@
 # midterms
 Hello ICE friends! This is a java project I created for the midterm questions that the prof. gave out <br>
 *Note: That not some methods might not be 100% as exams wants this is because the code is sometimes modified to allow for printing to the console*
-| Done      | Big-O        | Source | Where to Find |
+| Done      | Time Complexity      | Source | Where to Find |
 | ------------- |:-------------:| -----:|-----:|
-| insertFromBottom()     | - | 2018 | UtilityStack.java|
+| insertFromBottom()     | Θ| 2018 | UtilityStack.java|
 | removeAt()     | -      |   2018 | CDLinkedList.java|
 | TestQueue | -      |    2018 | TestQueue.java|
 | ChangeToIntersect()| - | 2017 | CDLinkedList.java|
