@@ -16,6 +16,7 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 |difference()|-|HW2022|BST.java|
 |QueueStack Implementation|-|-|QueueStack.java|
 |StackQueue Implementation|-|-|StackQueue.java|
+|Duplicate BST Problem|-|2018|BST file|
 
 
 # For written question
