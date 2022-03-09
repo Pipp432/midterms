@@ -1,5 +1,7 @@
 package Stack;
 
+import Queues.QueueStack;
+
 public class Main {
     public static void main(String args[] ) throws Exception{
         StackArray s = new StackArray();
@@ -8,6 +10,7 @@ public class Main {
         s.push(3);
         s.push(4);
         s.push(5);
+        
         
 
         // UtilityStack.insertFromBottom(3, 35, s);
