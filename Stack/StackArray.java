@@ -13,6 +13,7 @@ public class StackArray implements MyStack {
 		currentSize =0;
 	}
 	
+	
 	public StackArray(int[] theArray, int currentSize) {
 		super();
 		this.theArray = theArray;
@@ -72,5 +73,6 @@ public class StackArray implements MyStack {
 		theArray[currentSize] = data;
 		currentSize++;
 	}
+	
 
 }

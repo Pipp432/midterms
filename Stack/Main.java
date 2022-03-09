@@ -1,7 +1,5 @@
 package Stack;
 
-
-
 public class Main {
     public static void main(String args[] ) throws Exception{
         StackArray s = new StackArray();
@@ -10,18 +8,32 @@ public class Main {
         s.push(3);
         s.push(4);
         s.push(5);
-        
-        StackQueue sq = new StackQueue();
-        sq.push(2);
-        sq.push(10);
-        sq.push(11);
-        sq.push(12);
-        sq.push(100);     
-        System.out.println("Size: "+sq.size());
-        while(!(sq.isEmpty())){
-            System.out.println(sq.top());
-            sq.pop();
+        int[] array  = s.getTheArray();
+        int k = 0;
+        int j = 0;
+        System.out.println("=================== Array Index ======================");
+        for (int i : array) {
+            System.out.println("index: "+k+" value: "+i);
+            k++;
+        } 
+        System.out.println("=================== Stack Index ======================");
+         while(!(s.isEmpty())){
+            System.out.println("index: "+j+" value: "+s.top());
+            j++;
+           s.pop();
         }
+        
+        // StackQueue sq = new StackQueue();
+        // sq.push(2);
+        // sq.push(10);
+        // sq.push(11);
+        // sq.push(12);
+        // sq.push(100);     
+        // System.out.println("Size: "+sq.size());
+        // while(!(sq.isEmpty())){
+        //     System.out.println(sq.top());
+        //     sq.pop();
+        // }
    
         
 
