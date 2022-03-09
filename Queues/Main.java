@@ -2,35 +2,54 @@ package Queues;
 
 class Main{
     public static void main(String args[] ) throws Exception{
-        QueueStack q1 = new QueueStack();
-        //QueueArray q2 = new QueueArray();
+        QueueArray q1 = new QueueArray();
+        QueueArray q2 = new QueueArray();
         q1.insertLast(1);
         q1.insertLast(3); 
         q1.insertLast(5); 
         q1.insertLast(7); 
         q1.insertLast(9);
-        QueueStack q2 = new QueueStack();
+        
+        QueueArray q3 = new QueueArray();
+        
+        int originalSize = q1.size();
+        while(originalSize!=q3.size()){
+            q3.insertLast(q1.front());
+            q1.insertLast(q1.removeFirst());
+        }
+        q2 = q1;
         //QueueArray q2 = new QueueArray();
-        q2.insertLast(1);
-        q2.insertLast(3); 
-        q2.insertLast(5); 
-        q2.insertLast(7); 
-        q2.insertLast(9);
+        // q2.insertLast(1);
+        // q2.insertLast(3); 
+        // q2.insertLast(5); 
+        // q2.insertLast(7); 
+        // q2.insertLast(9);
         int k = 0;
 
-        System.out.println("=================== Queue Index ======================");
+        System.out.println("=================== Queue1 Index ======================");
         while(!q1.isEmpty()){
             System.out.println("Index: "+k +" value: "+q1.removeFirst());
             k++;
         }
         k=0;
-
-        System.out.println("=================== Stack Index ======================");
-        while(!q2.s1.isEmpty()){
-            System.out.println("Index: "+k +" value: "+q2.s1.top());
-            q2.s1.pop();
-
+        System.out.println("=================== Queue2 Index ======================");
+        while(!q2.isEmpty()){
+            System.out.println("Index: "+k +" value: "+q2.removeFirst());
+            k++;
         }
+        System.out.println("=================== Queue3 Index ======================");
+        while(!q3.isEmpty()){
+            System.out.println("Index: "+k +" value: "+q3.removeFirst());
+            k++;
+        }
+        k=0;
+
+        // System.out.println("=================== Stack Index ======================");
+        // while(!q2.s1.isEmpty()){
+        //     System.out.println("Index: "+k +" value: "+q2.s1.top());
+        //     q2.s1.pop();
+
+        // }
         
         
         // q2.insertLast(2);

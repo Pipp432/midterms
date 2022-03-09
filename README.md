@@ -25,9 +25,11 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 [(Example in QueueStack.java line 7)](https://github.com/Pipp432/midterms/blob/master/Queues/QueueStack.java)
 * Interfaces can use methods that are defined in them but beware the child class implementation.
 * All class implementing interfaces must have all the methods defined in the interface 
-* Constructors can be called by using the _this_ keyword example
+[(Example in StackQueue.java)](https://github.com/Pipp432/midterms/blob/master/Stack/StackQueue.java)
+* Constructors can be called by using the _this_ keyword 
 
 ```java
+// Example
 public class Rectangle {
     private int x, y;
     private int width, height;
@@ -48,8 +50,71 @@ public class Rectangle {
    
 }
 ```
+* Beware of shallow copies. When an object(Reference Type) is created a label is created to refer to it.
+Any new object assigned as it will just be a label pointing to it (A shallow copy)
+copying requires more in depth operations.
 
-[(Example in StackQueue.java)](https://github.com/Pipp432/midterms/blob/master/Stack/StackQueue.java)
+``` java
+public class Example{
+    QueueArray q1 = new QueueArray();
+    QueueArray q2 = new QueueArray();  
+    QueueArray q3 = new QueueArray();
+    q1.insertLast(1);
+    q1.insertLast(3); 
+    q1.insertLast(5); 
+    q1.insertLast(7); 
+    q1.insertLast(9);
+    
+    int originalSize = q1.size();
+    
+    // Shallow copy
+    q2 = q1;
+
+    // Deep copy
+    while(originalSize!=q3.size()){
+        q3.insertLast(q1.front());
+        q1.insertLast(q1.removeFirst());
+    }
+
+    int k = 0;
+    // Driver code
+    System.out.println("=================== Queue1 Index ======================");
+    while(!q1.isEmpty()){
+        System.out.println("Index: "+k +" value: "+q1.removeFirst());
+    k++;
+    }
+    k=0;
+    System.out.println("=================== Queue2 Index ======================");
+    while(!q2.isEmpty()){
+        System.out.println("Index: "+k +" value: "+q2.removeFirst());
+        k++;
+    }
+    System.out.println("=================== Queue3 Index ======================");
+    while(!q3.isEmpty()){
+        System.out.println("Index: "+k +" value: "+q3.removeFirst());
+        k++;
+    }
+    k=0;
+
+}
+// Outputs
+//=================== Queue1 Index ======================
+//Index: 0 value: 1
+//Index: 1 value: 3
+//Index: 2 value: 5
+//Index: 3 value: 7
+//Index: 4 value: 9
+//=================== Queue2 Index ======================
+//=================== Queue3 Index ======================
+//Index: 0 value: 1
+//Index: 1 value: 3
+//Index: 2 value: 5
+//Index: 3 value: 7
+//Index: 4 value: 9
+```
+
+
+
 ## Stacks
 Iterating through Stacks uses both top() and pop() (value and removing)
 ### Stack Array 
