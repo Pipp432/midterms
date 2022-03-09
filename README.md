@@ -32,7 +32,7 @@ public class Rectangle {
     private int width, height;
         
     public Rectangle() {
-        this(0, 0, 1, 1);
+        this(0, 0, 1, 1) // These are basiclly defualt values if non are given;
     }
     public Rectangle(int width, int height) {
         this(0, 0, width, height);
