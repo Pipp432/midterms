@@ -8,6 +8,9 @@ public class StackLinkedList implements MyStack {
 	public StackLinkedList(){ // create an empty stack
 		theList = new CDLinkedList();
 	}
+	public CDLinkedList getLinkedList(){
+		return theList;
+	}
 	
 	public StackLinkedList(CDLinkedList l) throws Exception {
 		super();

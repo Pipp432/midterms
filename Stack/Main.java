@@ -1,21 +1,29 @@
 package Stack;
 
+import LinkedList.CDLinkedList;
+import LinkedList.*;
+
 public class Main {
     public static void main(String args[] ) throws Exception{
-        StackArray s = new StackArray();
+        StackLinkedList s = new StackLinkedList();
         s.push(1);
         s.push(2);
         s.push(3);
         s.push(4);
         s.push(5);
-        int[] array  = s.getTheArray();
+        CDLinkedList list = s.getTheList();
         int k = 0;
         int j = 0;
-        System.out.println("=================== Array Index ======================");
-        for (int i : array) {
-            System.out.println("index: "+k+" value: "+i);
+        System.out.println("=================== Linked List Index ======================");
+        DListIterator it = new DListIterator(list.header);
+        it.next();
+        while(it.currentNode!=list.header){
+            System.out.println("Index: "+k+" value: "+it.currentNode.data);
+            it.next();
             k++;
-        } 
+
+        }
+       
         System.out.println("=================== Stack Index ======================");
          while(!(s.isEmpty())){
             System.out.println("index: "+j+" value: "+s.top());

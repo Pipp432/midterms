@@ -25,8 +25,9 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 [(Example in QueueStack.java line 7)](https://github.com/Pipp432/midterms/blob/master/Queues/QueueStack.java)
 * Interfaces can use methods that are defined in them but beware the child class implementation.
 ## Stacks
-The StackArray Implementation of Stacks
-
+### Stack Array 
+The StackArray Implementation of Stacks have inverse ordering, that is the top of the stack is the last value in the array.
+This can be fix by reversing the stack.
 =================== Array Index ======================
 
 index: 0 value: 1 <br>
@@ -47,3 +48,6 @@ index: 1 value: 4 <br>
 index: 2 value: 3 <br>
 index: 3 value: 2 <br>
 index: 4 value: 1 <br>
+
+### Stack Linked List 
+The Linked List version however doesn't suffer the same problem. The current version of StackLinkedList used CDLinkedList but can also be done with singly linked list.
