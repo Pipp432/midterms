@@ -26,7 +26,9 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 * Interfaces can use methods that are defined in them but beware the child class implementation.
 ## Stacks
 The StackArray Implementation of Stacks
+
 =================== Array Index ======================
+
 index: 0 value: 1
 index: 1 value: 2
 index: 2 value: 3
@@ -37,6 +39,7 @@ index: 6 value: 0
 index: 7 value: 0
 index: 8 value: 0
 index: 9 value: 0
+
 =================== Stack Index ======================
 index: 0 value: 5
 index: 1 value: 4
