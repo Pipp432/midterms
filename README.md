@@ -61,8 +61,6 @@ __Tip: To get a better understanding I recommend pluging and follow the algorith
 __Note: The same applies for hasPrevious() and previous() but find lesser.__
 
 ## Queues
-I technique I have seen used often is 
-
-```java queue.insertLast(queue.removeFirst())```
-
+I technique I have seen used often is <br>
+```java queue.insertLast(queue.removeFirst())```<br>
 To put the first data back at the back of the queue.
