@@ -184,11 +184,11 @@ public class Example{
 // index: 3 value: 2
 // index: 4 value: 1
 // =================== Stack2 Index ======================
-// index: 5 value: 1
-// index: 6 value: 2
-// index: 7 value: 3
-// index: 8 value: 4
-// index: 9 value: 5
+// index: 0 value: 1
+// index: 1 value: 2
+// index: 2 value: 3
+// index: 3 value: 4
+// index: 4 value: 5
 }
 ```
 
