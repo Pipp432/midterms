@@ -67,3 +67,5 @@ I technique I have seen used often is <br>
  ```
  <br>
 To put the first data back at the back of the queue.
+This helps a lot when memory is limited and sorting with only one queue 
+[(This the basis for piority queue)] ()
