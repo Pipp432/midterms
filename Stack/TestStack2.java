@@ -16,8 +16,6 @@ public class TestStack2 {
 
        
        
-
-
         for(int i = 0; i<index1;i++){
             temp.push(s1.top());
             s1.pop();

@@ -122,6 +122,52 @@ Iterating through Stacks uses both top() and pop() (value and removing)
 ### Stack Array 
 The StackArray Implementation of Stacks have inverse ordering, that is the top of the stack is the last value in the array.
 This can be fix by reversing the stack.
+```java
+public class Example{
+    StackLinkedList s1 = new StackLinkedlist();
+    StackLinkedList s2 = new StackLinkedlist();
+    public MyStack reverse(){
+        StackLinkedList temp = new StackLinkedList();
+        while(!s1.isEmpty()){
+            temp.push(s1.top());
+            s2.push(s1.top());
+            s1.pop();
+        }while(!temp.isEmpty()){
+            s1.push(temp.top());
+            temp.pop();
+        }
+        return s2;
+    }
+    s2 = s1.reverse();
+    // Driver
+     System.out.println("=================== Stack1 Index ======================");
+         while(!(s.isEmpty())){
+            System.out.println("index: "+j+" value: "+s.top());
+            j++;
+           s.pop();
+        }
+        System.out.println("=================== Stack2 Index ======================");
+        while(!(s2.isEmpty())){
+           System.out.println("index: "+j+" value: "+s2.top());
+           j++;
+          s2.pop();
+       }
+    // s2 is s1 revered
+    // Output
+// =================== Stack1 Index ======================
+// index: 0 value: 5
+// index: 1 value: 4
+// index: 2 value: 3
+// index: 3 value: 2
+// index: 4 value: 1
+// =================== Stack2 Index ======================
+// index: 5 value: 1
+// index: 6 value: 2
+// index: 7 value: 3
+// index: 8 value: 4
+// index: 9 value: 5
+}
+```
 
 =================== Array Index ======================
 

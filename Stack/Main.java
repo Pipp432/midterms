@@ -11,25 +11,42 @@ public class Main {
         s.push(3);
         s.push(4);
         s.push(5);
+        StackLinkedList s2 = new StackLinkedList();
+        StackLinkedList temp= new StackLinkedList();
+
+        while(!s.isEmpty()){
+            temp.push(s.top());
+            s2.push(s.top());
+            s.pop();
+        }while(!temp.isEmpty()){
+            s.push(temp.top());
+            temp.pop();
+        }
         CDLinkedList list = s.getTheList();
         int k = 0;
         int j = 0;
-        System.out.println("=================== Linked List Index ======================");
-        DListIterator it = new DListIterator(list.header);
-        it.next();
-        while(it.currentNode!=list.header){
-            System.out.println("Index: "+k+" value: "+it.currentNode.data);
-            it.next();
-            k++;
+        // System.out.println("=================== Linked List Index ======================");
+        // DListIterator it = new DListIterator(list.header);
+        // it.next();
+        // while(it.currentNode!=list.header){
+        //     System.out.println("Index: "+k+" value: "+it.currentNode.data);
+        //     it.next();
+        //     k++;
 
-        }
+        // }
        
-        System.out.println("=================== Stack Index ======================");
+        System.out.println("=================== Stack1 Index ======================");
          while(!(s.isEmpty())){
             System.out.println("index: "+j+" value: "+s.top());
             j++;
            s.pop();
         }
+        System.out.println("=================== Stack2 Index ======================");
+        while(!(s2.isEmpty())){
+           System.out.println("index: "+j+" value: "+s2.top());
+           j++;
+          s2.pop();
+       }
         
         // StackQueue sq = new StackQueue();
         // sq.push(2);
