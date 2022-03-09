@@ -148,8 +148,8 @@ The current version of StackLinkedList used CDLinkedList but can also be done wi
 
 ## BST
 ### next() and hasNext() 
-These 2 methods are not as striaghtforward as you might think both do not iterate to the left or right node when called but will find the next largest data. 
-__Tip: To get a better understanding I recommend pluging and follow the algorithm.__
+These 2 methods are not as striaghtforward as you might think both do not iterate to the left or right node when called but will find the next largest data.<br>
+__Tip: To get a better understanding I recommend pluging and follow the algorithm.__<br>
 __Note: The same applies for hasPrevious() and previous() but find lesser.__
 
 ## Queues
