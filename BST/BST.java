@@ -191,7 +191,6 @@ public class BST {
 		TreeIterator itr = new TreeIterator(temp);
 		return itr;
 	}
-	// This is currently a WIP. Technically it works but it return a one sided tree
 	public BST greaterThan(int v) throws Exception{
 		TreeIterator itr =(TreeIterator)(findMin());
 		BST result = new BST(null,0);

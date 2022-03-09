@@ -25,6 +25,7 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 [(Example in QueueStack.java line 7)](https://github.com/Pipp432/midterms/blob/master/Queues/QueueStack.java)
 * Interfaces can use methods that are defined in them but beware the child class implementation.
 ## Stacks
+Iterating through Stacks uses both top() and pop() (value and removing)
 ### Stack Array 
 The StackArray Implementation of Stacks have inverse ordering, that is the top of the stack is the last value in the array.
 This can be fix by reversing the stack.
@@ -50,4 +51,16 @@ index: 3 value: 2 <br>
 index: 4 value: 1 <br>
 
 ### Stack Linked List 
-The Linked List version however doesn't suffer the same problem. The current version of StackLinkedList used CDLinkedList but can also be done with singly linked list.
+The Linked List version however doesn't suffer the same problem. 
+The current version of StackLinkedList used CDLinkedList but can also be done with singly linked list.
+
+## BST
+### next() and hasNext() 
+These 2 methods are not as striaghtforward as you might think both do not iterate to the left or right node when called but will find the next largest data. 
+__Tip: To get a better understanding I recommend pluging and follow the algorithm.__
+__Note: The same applies for hasPrevious() and previous() but find lesser.__
+
+## Queues
+I technique I have seen used often is 
+```java queue.insertLast(queue.removeFirst())```
+To put the first data back at the back of the queue.

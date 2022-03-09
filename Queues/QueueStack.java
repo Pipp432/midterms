@@ -4,7 +4,9 @@ import Stack.MyStack;
 import Stack.StackArray;
 
 public class QueueStack implements MyQueue {
-    private MyStack s1,s2;
+    public MyStack s1;
+    
+    private MyStack s2;
     // Note this isn't in the midterm papers but ajarn mentioned it in class
     // s1 will be used to stored the data and s2 will be a temp Stack
 
