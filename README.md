@@ -192,7 +192,6 @@ public class Example{
 }
 ```
 
-
 ### Stack Linked List 
 The Linked List version however doesn't suffer the same problem. 
 The current version of StackLinkedList used CDLinkedList but can also be done with singly linked list.
