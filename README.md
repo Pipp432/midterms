@@ -117,6 +117,8 @@ public class Example{
 
 ## Stacks
 Iterating through Stacks uses both top() and pop() (value and removing)
+[(Example)](https://github.com/Pipp432/midterms/blob/master/Stack/TestStack.java)
+
 ### Stack Array 
 The StackArray Implementation of Stacks have inverse ordering, that is the top of the stack is the last value in the array.
 This can be fix by reversing the stack.
