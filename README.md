@@ -3,7 +3,7 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 *Note: That not some methods might not be 100% as exams wants this is because the code is sometimes modified to allow for printing to the console*
 | Done      | Time Complexity      | Source | Where to Find |
 | ------------- |:-------------:| -----:|-----:|
-| insertFromBottom()     | Θ| 2018 | UtilityStack.java|
+| insertFromBottom()     | Θ(n)| 2018 | UtilityStack.java|
 | removeAt()     | -      |   2018 | CDLinkedList.java|
 | TestQueue | -      |    2018 | TestQueue.java|
 | ChangeToIntersect()| - | 2017 | CDLinkedList.java|
