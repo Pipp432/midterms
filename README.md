@@ -50,7 +50,7 @@ public class Rectangle {
    
 }
 ```
-* Beware of shallow copies. When an object(Reference Type) is created a label is created to refer to it.
+* Beware of shallow copies. When an object (Reference Type) is created a label is created to refer to it.
 Any new object assigned as it will just be a label pointing to it (A shallow copy)
 copying requires more in depth operations.
 
