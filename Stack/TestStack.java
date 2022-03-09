@@ -9,7 +9,10 @@ public class TestStack {
     public MyStack getStack(){
         return this.s;
     }
-    public MyStack oddNumbers() throws Exception{ 
+    public MyStack oddNumbers() throws Exception{
+        if(s==null){
+            return null;
+        } 
         int size =0;
        StackArray tempOdd = new StackArray();
        StackArray temp = new StackArray();

@@ -4,16 +4,16 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 | Done      | Time Complexity      | Source | Where to Find |
 | ------------- |:-------------:| -----:|-----:|
 | insertFromBottom()     | Θ(n)| 2018 | UtilityStack.java|
-| removeAt()     | -      |   2018 | CDLinkedList.java|
-| TestQueue | -      |    2018 | TestQueue.java|
-| ChangeToIntersect()| - | 2017 | CDLinkedList.java|
-| OddNumber()| - | 2016 | TestStack.java|
-| CrossOver()| - | 2016 | TestQueue2.java|
-| GreaterThan() | - | 2017 | BST.java|
+| removeAt()     | Θ(n)    |   2018 | CDLinkedList.java|
+| TestQueue | Θ(n)      |    2018 | TestQueue.java|
+| ChangeToIntersect()| O(n) | 2017 | CDLinkedList.java|
+| OddNumber()| O(n) | 2016 | TestStack.java|
+| CrossOver()| O(n) | 2016 | TestQueue2.java|
+| GreaterThan() | O(n)| 2017 | BST.java|
 | swap()| O(n) | 2017 | TestStack2.java|
 | swap()| O(n) | 2016 | CDLinkedList.java|
-|hasGreaterValueThan()|-|HW2022|BST.java|
-|difference()|-|HW2022|BST.java|
+|hasGreaterValueThan()|O(n)|HW2022|BST.java|
+|difference()|O(n^2)|HW2022|BST.java|
 |QueueStack Implementation|-|-|QueueStack.java|
 |StackQueue Implementation|-|-|StackQueue.java|
 |Duplicate BST Problem|-|2018|BST file|
