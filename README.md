@@ -9,11 +9,12 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 | ChangeToIntersect()| - | 2017 | CDLinkedList.java|
 | OddNumber()| - | 2016 | TestStack.java|
 | CrossOver()| - | 2016 | TestQueue2.java|
-| GreaterThan() [WIP]| - | 2017 | BST.java|
+| GreaterThan() | - | 2017 | BST.java|
 | swap()| O(n) | 2017 | TestStack2.java|
 | swap()| O(n) | 2016 | CDLinkedList.java|
 |hasGreaterValueThan()|-|HW2022|BST.java|
 |difference()|-|HW2022|BST.java|
+|QueueStack Implementation|-|GeeksForGeeks.com|QueueStack.java|
 
 
 # For written question
