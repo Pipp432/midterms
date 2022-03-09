@@ -10,15 +10,24 @@ public class TestQueue  {
         //so I am assuming implementations can be used too.
         // An array for storing the new queue
         QueueArray result = new QueueArray();
-        while(!(q2.isEmpty())){
+        while(!(q2.isEmpty()&& q1.isEmpty())){
             // Insert first who ever is lowest value
-            if(q2.front()>=q1.front()){
+           if(!q1.isEmpty()){
+               if(q2.front()>=q1.front()){
                 result.insertLast(q1.front());
                 q1.removeFirst();
             }else{
                 result.insertLast(q2.front());
                 q2.removeFirst();
             }
+
+           }else{
+                result.insertLast(q2.front());
+                q2.removeFirst();
+            } 
+            
+            System.out.println(result.toString());
+           
         }
        // return the queue
         return result;
