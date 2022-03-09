@@ -26,13 +26,15 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 * Interfaces can use methods that are defined in them but beware the child class implementation.
 * All class implementing interfaces must have all the methods defined in the interface 
 * Constructors can be called by using the _this_ keyword example
+
 ```java
 public class Rectangle {
     private int x, y;
     private int width, height;
         
     public Rectangle() {
-        this(0, 0, 1, 1) // These are basiclly defualt values if non are given;
+        // These are basiclly defualt values if non are given;
+        this(0, 0, 1, 1) 
     }
     public Rectangle(int width, int height) {
         this(0, 0, width, height);
@@ -45,7 +47,6 @@ public class Rectangle {
     }
    
 }
-
 ```
 
 [(Example in StackQueue.java)](https://github.com/Pipp432/midterms/blob/master/Stack/StackQueue.java)
