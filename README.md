@@ -29,20 +29,21 @@ The StackArray Implementation of Stacks
 
 =================== Array Index ======================
 
-index: 0 value: 1
-index: 1 value: 2
-index: 2 value: 3
-index: 3 value: 4
-index: 4 value: 5
-index: 5 value: 0
-index: 6 value: 0
-index: 7 value: 0
-index: 8 value: 0
-index: 9 value: 0
+index: 0 value: 1 <br>
+index: 1 value: 2 <br>
+index: 2 value: 3 <br> 
+index: 3 value: 4 <br>
+index: 4 value: 5 <br>
+index: 5 value: 0 <br>
+index: 6 value: 0 <br>
+index: 7 value: 0 <br>
+index: 8 value: 0 <br>
+index: 9 value: 0 <br>
 
 =================== Stack Index ======================
-index: 0 value: 5
-index: 1 value: 4
-index: 2 value: 3
-index: 3 value: 2
-index: 4 value: 1
+
+index: 0 value: 5 <br>
+index: 1 value: 4 <br>
+index: 2 value: 3 <br>
+index: 3 value: 2 <br>
+index: 4 value: 1 <br>
