@@ -62,5 +62,7 @@ __Note: The same applies for hasPrevious() and previous() but find lesser.__
 
 ## Queues
 I technique I have seen used often is 
+
 ```java queue.insertLast(queue.removeFirst())```
+
 To put the first data back at the back of the queue.
