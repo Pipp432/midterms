@@ -122,6 +122,29 @@ Iterating through Stacks uses both top() and pop() (value and removing)
 ### Stack Array 
 The StackArray Implementation of Stacks have inverse ordering, that is the top of the stack is the last value in the array.
 This can be fix by reversing the stack.
+
+=================== Array Index ======================
+
+index: 0 value: 1 <br>
+index: 1 value: 2 <br>
+index: 2 value: 3 <br> 
+index: 3 value: 4 <br>
+index: 4 value: 5 <br>
+index: 5 value: 0 <br>
+index: 6 value: 0 <br>
+index: 7 value: 0 <br>
+index: 8 value: 0 <br>
+index: 9 value: 0 <br>
+
+=================== Stack Index ======================
+
+index: 0 value: 5 <br>
+index: 1 value: 4 <br>
+index: 2 value: 3 <br>
+index: 3 value: 2 <br>
+index: 4 value: 1 <br>
+
+### Reversing a Stack
 ```java
 public class Example{
     StackLinkedList s1 = new StackLinkedlist();
@@ -169,26 +192,6 @@ public class Example{
 }
 ```
 
-=================== Array Index ======================
-
-index: 0 value: 1 <br>
-index: 1 value: 2 <br>
-index: 2 value: 3 <br> 
-index: 3 value: 4 <br>
-index: 4 value: 5 <br>
-index: 5 value: 0 <br>
-index: 6 value: 0 <br>
-index: 7 value: 0 <br>
-index: 8 value: 0 <br>
-index: 9 value: 0 <br>
-
-=================== Stack Index ======================
-
-index: 0 value: 5 <br>
-index: 1 value: 4 <br>
-index: 2 value: 3 <br>
-index: 3 value: 2 <br>
-index: 4 value: 1 <br>
 
 ### Stack Linked List 
 The Linked List version however doesn't suffer the same problem. 
