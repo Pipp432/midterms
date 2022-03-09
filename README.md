@@ -120,6 +120,7 @@ Iterating through Stacks uses both top() and pop() (value and removing)
 ### Stack Array 
 The StackArray Implementation of Stacks have inverse ordering, that is the top of the stack is the last value in the array.
 This can be fix by reversing the stack.
+
 =================== Array Index ======================
 
 index: 0 value: 1 <br>
