@@ -1,5 +1,4 @@
 # Midterms
-Hello ICE friends! This is a java project I created for the midterm questions that the prof. gave out <br>
 *Note: That not some methods might not be 100% as exams wants this is because the code is sometimes modified to allow for printing to the console*
 | Done      | Time Complexity      | Source | Where to Find |
 | ------------- |:-------------:| -----:|-----:|
@@ -19,196 +18,19 @@ Hello ICE friends! This is a java project I created for the midterm questions th
 |Duplicate BST Problem|-|2018|BST file|
 
 
-# Read Before Exam
-## General
-* Interfaces constructors cannot be called directly but classes can have them as parameters.
-[(Example in QueueStack.java line 7)](https://github.com/Pipp432/midterms/blob/master/Queues/QueueStack.java)
-* Interfaces can use methods that are defined in them but beware the child class implementation.
-* All class implementing interfaces must have all the methods defined in the interface 
-[(Example in StackQueue.java)](https://github.com/Pipp432/midterms/blob/master/Stack/StackQueue.java)
-* Constructors can be called by using the _this_ keyword 
+# To future readers of this repository (ISE ICE)
+&ensp; Hello this is the author and contributor of this repository on data structure and algorithms. This repository was made to share ideas and solution to some problems provided by the professor (Note that I won't be saving or sharing the actual papers as respect for the professor's intellectual work but I do think he will provide you with some in MyCourseVille). 
 
-```java
-// Example
-public class Rectangle {
-    private int x, y;
-    private int width, height;
-        
-    public Rectangle() {
-        // These are basiclly defualt values if non are given;
-        this(0, 0, 1, 1) 
-    }
-    public Rectangle(int width, int height) {
-        this(0, 0, width, height);
-    }
-    public Rectangle(int x, int y, int width, int height) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-    }
-   
-}
-```
-* Beware of shallow copies. When an object (Reference Type) is created a label is created to refer to it.
-Any new object assigned as it will just be a label pointing to it (A shallow copy)
-copying requires more in depth operations.
+&ensp; I want to give some tips on how to do the exams to get good score and tell some of my own mistakes.<br>
+1. Don't solely focus on the code itself. The exams as you know is written one. You must be able to explain concepts clearly and in detail assume that the reader only know the basics.
+2. Prepare good writing equipment. write with pen draw with pencil, I tried to used only pencils and that ended badly.
+3. Read the prompt well don't just scan.
+4. Always account for fringe and extreme cases. For example null inputs, empty arrays, only one element arrays. They are the most overlooked and the first thing the professor tests on.
+5. In code always write guard cluases against incorrect inputs, unless the prompt says to ignore them.
+6. Every assumption made should be stated clearly.
+7. Always think about how a data structure can be implemented using another data structure. Ex. Implementing queue using linked list, Implementing queues from stack, Implementing BST from CD linked list etc.
+8. Always beware about time complexity it is one of the metric the professor will gauge your code.
+9. Try to explain to yourself the code written. It is not enough to know what the code does, you must know what each statement does and why.
+10. Practice a lot, I recommend [leetCode](https://leetcode.com/) to find exercises but do only easy to medium ones.
+11. Don't give up and look at the solutions. Solving problem takes time.
 
-``` java
-public class Example{
-    QueueArray q1 = new QueueArray();
-    QueueArray q2 = new QueueArray();  
-    QueueArray q3 = new QueueArray();
-    q1.insertLast(1);
-    q1.insertLast(3); 
-    q1.insertLast(5); 
-    q1.insertLast(7); 
-    q1.insertLast(9);
-    
-    int originalSize = q1.size();
-    
-    // Shallow copy
-    q2 = q1;
-
-    // Deep copy
-    while(originalSize!=q3.size()){
-        q3.insertLast(q1.front());
-        q1.insertLast(q1.removeFirst());
-    }
-
-    int k = 0;
-    // Driver code
-    System.out.println("=================== Queue1 Index ======================");
-    while(!q1.isEmpty()){
-        System.out.println("Index: "+k +" value: "+q1.removeFirst());
-    k++;
-    }
-    k=0;
-    System.out.println("=================== Queue2 Index ======================");
-    while(!q2.isEmpty()){
-        System.out.println("Index: "+k +" value: "+q2.removeFirst());
-        k++;
-    }
-    System.out.println("=================== Queue3 Index ======================");
-    while(!q3.isEmpty()){
-        System.out.println("Index: "+k +" value: "+q3.removeFirst());
-        k++;
-    }
-    k=0;
-
-}
-// Outputs
-//=================== Queue1 Index ======================
-//Index: 0 value: 1
-//Index: 1 value: 3
-//Index: 2 value: 5
-//Index: 3 value: 7
-//Index: 4 value: 9
-//=================== Queue2 Index ======================
-//=================== Queue3 Index ======================
-//Index: 0 value: 1
-//Index: 1 value: 3
-//Index: 2 value: 5
-//Index: 3 value: 7
-//Index: 4 value: 9
-```
-
-
-
-## Stacks
-Iterating through Stacks uses both top() and pop() (value and removing)
-[(Example)](https://github.com/Pipp432/midterms/blob/master/Stack/TestStack.java)
-
-### Stack Array 
-The StackArray Implementation of Stacks have inverse ordering, that is the top of the stack is the last value in the array.
-This can be fix by reversing the stack.
-
-=================== Array Index ======================
-
-index: 0 value: 1 <br>
-index: 1 value: 2 <br>
-index: 2 value: 3 <br> 
-index: 3 value: 4 <br>
-index: 4 value: 5 <br>
-index: 5 value: 0 <br>
-index: 6 value: 0 <br>
-index: 7 value: 0 <br>
-index: 8 value: 0 <br>
-index: 9 value: 0 <br>
-
-=================== Stack Index ======================
-
-index: 0 value: 5 <br>
-index: 1 value: 4 <br>
-index: 2 value: 3 <br>
-index: 3 value: 2 <br>
-index: 4 value: 1 <br>
-
-### Reversing a Stack
-```java
-public class Example{
-    StackLinkedList s1 = new StackLinkedlist();
-    StackLinkedList s2 = new StackLinkedlist();
-    public MyStack reverse(){
-        StackLinkedList temp = new StackLinkedList();
-        while(!s1.isEmpty()){
-            temp.push(s1.top());
-            s2.push(s1.top());
-            s1.pop();
-        }while(!temp.isEmpty()){
-            s1.push(temp.top());
-            temp.pop();
-        }
-        return s2;
-    }
-    s2 = s1.reverse();
-    // Driver
-     System.out.println("=================== Stack1 Index ======================");
-         while(!(s.isEmpty())){
-            System.out.println("index: "+j+" value: "+s.top());
-            j++;
-           s.pop();
-        }
-        System.out.println("=================== Stack2 Index ======================");
-        while(!(s2.isEmpty())){
-           System.out.println("index: "+j+" value: "+s2.top());
-           j++;
-          s2.pop();
-       }
-    // s2 is s1 revered
-    // Output
-// =================== Stack1 Index ======================
-// index: 0 value: 5
-// index: 1 value: 4
-// index: 2 value: 3
-// index: 3 value: 2
-// index: 4 value: 1
-// =================== Stack2 Index ======================
-// index: 0 value: 1
-// index: 1 value: 2
-// index: 2 value: 3
-// index: 3 value: 4
-// index: 4 value: 5
-}
-```
-
-### Stack Linked List 
-The Linked List version however doesn't suffer the same problem. 
-The current version of StackLinkedList used CDLinkedList but can also be done with singly linked list.
-
-## BST
-### next() and hasNext() 
-These 2 methods are not as striaghtforward as you might think both do not iterate to the left or right node when called but will find the next largest data.<br>
-__Tip: To get a better understanding I recommend pluging and follow the algorithm.__<br>
-__Note: The same applies for hasPrevious() and previous() but find lesser.__
-
-## Queues
-I technique I have seen used often is <br>
-```java
- queue.insertLast(queue.removeFirst())
- ```
- <br>
-To put the first data back at the back of the queue.
-This helps a lot when memory is limited and sorting with only one queue 
-
-[(This the basis for piority queue)](https://github.com/Pipp432/midterms/blob/master/Queues/PriorityQueue.java)
